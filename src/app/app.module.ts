@@ -2,9 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-
 import { AppComponent } from './app.component';
-import { appRoutes } from './app.routing.module';
+import { QuestionnairModule } from './questionnair/questionnair.module';
+import { QuizService } from './quiz.service';
+
 
 @NgModule({
   declarations: [
@@ -12,10 +13,9 @@ import { appRoutes } from './app.routing.module';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
-    RouterModule
+    QuestionnairModule
   ],
-  providers: [],
+  providers: [QuizService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
